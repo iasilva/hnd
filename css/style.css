@@ -1,0 +1,75 @@
+
+/* 
+    Created on : 30/01/2017, 17:31:37
+    Author     : Ivan
+*/
+html {
+font-size: 62.5%;
+}
+#header-master{
+    background: #e38d13;
+   
+}
+body{
+    background-image: url("../images/bg.jpg");
+    background-position: left top;
+    background-attachment: fixed;
+}
+h1{
+    color: #FFF;
+}
+
+h2,h3,h4,h5,h6{   
+    margin-bottom: 20px;
+ 
+}
+#content{
+    font-size:1.5em;
+    line-height: 1.5;
+}
+#quadro1,#quadro2,#quadro3,#quadro4,#quadro5{
+    margin-top: 1em;
+    padding-top: 4em;  
+    padding-bottom: 4em;
+    border-bottom: 2px #DDD dashed;
+}
+#quadro1{
+    padding-top: 0;  
+    color: #EEE;
+
+}
+
+
+#quadro2{
+    background: #a94442;    
+    border: 2px #DDD dashed;
+    color: #EEE;
+}
+#quadro3{
+    background: #31708f;    
+    border: 2px #DDD dashed;
+     color: #EEE;
+}
+#quadro4{
+    background: #f7e1b5;    
+    border: 2px #FEFEFE dashed;
+     
+}
+#quadro4 h1{
+    color: #e38d13;
+}
+#quadro5 h1{
+    color: #e38d13;
+}
+
+
+
+p,ul{
+    
+    margin-top: 28pt;
+}
+
+ul li{
+    color: #EEE;
+}
+

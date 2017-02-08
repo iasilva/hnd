@@ -1,0 +1,8 @@
+{
+    "require": {
+        "fuel/email": "1.8.0.4",
+        "simple-crud/simple-crud": "^6.8",
+        "iasilva/messages": "^1.0"
+        
+    }
+}
