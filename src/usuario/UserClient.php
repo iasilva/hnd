@@ -21,7 +21,7 @@ class UserClient
        
         if ($this->capture()) {
 
-            var_dump(new \Thirday\Usuario\Prospecto($this->user));
+            new \Thirday\Usuario\Prospecto($this->user);
         }
     }
 

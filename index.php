@@ -1,3 +1,29 @@
+<?php
+require_once './config/config.php';
+        require_once 'vendor/autoload.php';
+        $valida = new \Thirday\Valida\Validacao;
+        $msg    = new thirday\messages\MensagemFactory;
+
+
+
+        if (isset($_POST) and count($_POST)>0) {
+            try {
+                new Thirday\Usuario\UserClient;
+                echo "<script type=\"text/javascript\">alert('Cadastro efetuado. Aguarde email.')</script>";
+              
+            } catch (Exception $exc) {
+                echo $exc->getTraceAsString();
+
+                if ($exc->getCode() == E_USER_ERROR) {
+                    $msg->exibeMensagem(new \thirday\messages\ErrorMessage,
+                        $exc->getMessage());
+                } else {
+                    $msg->exibeMensagem(new \thirday\messages\InfoMessage,
+                        $exc->getMessage());
+                }
+            }
+        }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,37 +38,7 @@
 
         <?php
         include_once './html/Home_01.php';
-        require_once './config/config.php';
-        require_once 'vendor/autoload.php';
-        $valida = new \Thirday\Valida\Validacao;
-        $msg    = new thirday\messages\MensagemFactory;
-
- 
-
-        if (isset($_POST) and count($_POST)>0) {
-            try {
-                new Thirday\Usuario\UserClient;
-                header("Location:confirm.php");
-            } catch (Exception $exc) {
-                echo $exc->getTraceAsString();
-
-                if ($exc->getCode() == E_USER_ERROR) {
-                    $msg->exibeMensagem(new \thirday\messages\ErrorMessage,
-                        $exc->getMessage());
-                } else {
-                    $msg->exibeMensagem(new \thirday\messages\InfoMessage,
-                        $exc->getMessage());
-                }
-            }
-        }
-
-
-
-
-
-
-
-
+        
 
 
             $htm = new Home_01;
